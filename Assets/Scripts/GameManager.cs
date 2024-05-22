@@ -20,11 +20,14 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (m_Gyro != null) {
+        if (m_Gyro != null)
+        {
             testingGyroText.text = Input.gyro.rotationRate.ToString();
-        } else {
+        }
+        else
+        {
             testingGyroText.text = "Not Found?";
         }
-        
+
     }
 }
