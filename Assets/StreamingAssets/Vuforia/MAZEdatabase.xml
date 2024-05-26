@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
+    <ImageTarget name="maze3d" size="0.150000 0.150000" />
     <ImageTarget name="mazeportal" size="0.150000 0.150000" />
     <ImageTarget name="mazespike" size="0.150000 0.150000" />
     <ImageTarget name="mazearrow" size="0.150000 0.150000" />
