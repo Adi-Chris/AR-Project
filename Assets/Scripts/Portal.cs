@@ -1,31 +1,44 @@
 using UnityEngine;
+using System.Collections;
 
 public class Portal : MonoBehaviour
 {
-    public Transform otherPortal;
-    public GameObject ball; // Assuming the ball is a separate GameObject
+    public GameObject targetPortal; // Assign the target portal in the Inspector
+    private bool isTeleporting = false;
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !isTeleporting)
         {
-            TeleportBall(other.transform);
+            StartCoroutine(Teleport(other));
         }
     }
 
-    void TeleportBall(Transform ballTransform)
+    public IEnumerator Teleport(Collider player) // Change to public
     {
-        Vector3 portalToBall = ballTransform.position - transform.position;
-        float dotProduct = Vector3.Dot(transform.forward, portalToBall);
+        isTeleporting = true;
+        Vector3 targetPosition = targetPortal.transform.position;
+        player.transform.position = targetPosition;
 
-        if (dotProduct > 0f) // Ball is moving towards the portal
+        // Set the target portal to be teleporting
+        Portal targetPortalScript = targetPortal.GetComponent<Portal>();
+        targetPortalScript.isTeleporting = true;
+
+        // Prevent the player from teleporting immediately again
+        Ball ball = player.GetComponent<Ball>();
+        if (ball != null)
         {
-            Vector3 newPosition = otherPortal.position + (otherPortal.forward * portalToBall.magnitude);
-            ballTransform.position = newPosition;
-
-            // Adjust ball's rotation based on portal orientation
-            Quaternion rotationDiff = Quaternion.FromToRotation(transform.forward, otherPortal.forward);
-            ballTransform.rotation = rotationDiff * ballTransform.rotation;
+            StartCoroutine(ball.Cooldown(1f));
         }
+
+        // Add a small delay to prevent immediate re-teleportation
+        yield return new WaitForSeconds(1f);
+
+        // Ensure player exits the target portal collider
+        yield return new WaitForSeconds(1f);
+
+        // Allow teleportation again
+        isTeleporting = false;
+        targetPortalScript.isTeleporting = false;
     }
 }
