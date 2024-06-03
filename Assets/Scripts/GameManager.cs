@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     // Ini buat testing gyro
     Gyroscope m_Gyro;
-    [SerializeField] private TMP_Text testingGyroText;
+    //[SerializeField] private TMP_Text testingGyroText;
 
     // Start is called before the first frame update
     void Start()
@@ -22,11 +22,11 @@ public class GameManager : MonoBehaviour
     {
         if (m_Gyro != null)
         {
-            testingGyroText.text = Input.gyro.rotationRate.ToString();
+            //testingGyroText.text = Input.gyro.rotationRate.ToString();
         }
         else
         {
-            testingGyroText.text = "Not Found?";
+            //testingGyroText.text = "Not Found?";
         }
 
     }
