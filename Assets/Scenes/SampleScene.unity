@@ -813,6 +813,7 @@ GameObject:
   - component: {fileID: 328534744}
   - component: {fileID: 328534743}
   - component: {fileID: 328534742}
+  - component: {fileID: 328534745}
   m_Layer: 0
   m_Name: bBiru
   m_TagString: Untagged
@@ -898,6 +899,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 328534740}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &328534745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328534740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef9f9a34ddfc684dadd88b67a6f6306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToToggle: {fileID: 864887655}
+  state: 1
 --- !u!1 &411695719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,6 +1327,7 @@ GameObject:
   - component: {fileID: 728546971}
   - component: {fileID: 728546970}
   - component: {fileID: 728546969}
+  - component: {fileID: 728546972}
   m_Layer: 0
   m_Name: Cone.003 (1)
   m_TagString: Untagged
@@ -1398,6 +1414,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728546967}
   m_Mesh: {fileID: 2504345457074934838, guid: 2bf9083ae3940d24ba5bc779c6c8d1c9, type: 3}
+--- !u!114 &728546972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728546967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 082c93d3dbefccd4680397ae2c5c0935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &762176247
 GameObject:
   m_ObjectHideFlags: 0
@@ -4910,6 +4938,7 @@ GameObject:
   - component: {fileID: 1673222132}
   - component: {fileID: 1673222131}
   - component: {fileID: 1673222130}
+  - component: {fileID: 1673222133}
   m_Layer: 0
   m_Name: Cone.003 (2)
   m_TagString: Untagged
@@ -4996,6 +5025,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1673222128}
   m_Mesh: {fileID: 2504345457074934838, guid: 2bf9083ae3940d24ba5bc779c6c8d1c9, type: 3}
+--- !u!114 &1673222133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673222128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 082c93d3dbefccd4680397ae2c5c0935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1675400132
 GameObject:
   m_ObjectHideFlags: 0
@@ -6642,6 +6683,7 @@ GameObject:
   - component: {fileID: 5686745122996721933}
   - component: {fileID: 3188891235162024371}
   - component: {fileID: 1392240535}
+  - component: {fileID: 5686745122996721934}
   m_Layer: 0
   m_Name: Cone.002
   m_TagString: Untagged
@@ -6711,6 +6753,7 @@ GameObject:
   - component: {fileID: 4538293100309035951}
   - component: {fileID: 2345890790666284400}
   - component: {fileID: 1392240534}
+  - component: {fileID: 4649304589954769917}
   m_Layer: 0
   m_Name: Cone.003
   m_TagString: Untagged
@@ -6718,6 +6761,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4649304589954769917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4649304589954769916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 082c93d3dbefccd4680397ae2c5c0935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4990442672813278321
 Transform:
   m_ObjectHideFlags: 0
@@ -6745,6 +6800,7 @@ GameObject:
   - component: {fileID: 1396110414269801995}
   - component: {fileID: 4366625687436407847}
   - component: {fileID: 1392240533}
+  - component: {fileID: 5633022798543185049}
   m_Layer: 0
   m_Name: Cone.004
   m_TagString: Untagged
@@ -6752,6 +6808,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5633022798543185049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5633022798543185048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 082c93d3dbefccd4680397ae2c5c0935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &5686745122996721933
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6760,6 +6828,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3291190920818251687}
   m_Mesh: {fileID: 5769486934180388862, guid: 2bf9083ae3940d24ba5bc779c6c8d1c9, type: 3}
+--- !u!114 &5686745122996721934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3291190920818251687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 082c93d3dbefccd4680397ae2c5c0935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6019093467915769314
 GameObject:
   m_ObjectHideFlags: 0
@@ -6772,6 +6852,7 @@ GameObject:
   - component: {fileID: 2638967573600999708}
   - component: {fileID: 8339267780026032418}
   - component: {fileID: 1392240532}
+  - component: {fileID: 8339267780026032419}
   m_Layer: 0
   m_Name: Cone.005
   m_TagString: Untagged
@@ -6821,3 +6902,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8339267780026032419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6019093467915769314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 082c93d3dbefccd4680397ae2c5c0935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
