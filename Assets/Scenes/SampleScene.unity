@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1088,14 +1088,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: mazearrow
+  mTrackableName: maze3
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/MAZEdatabase.xml
   mAspectRatio: 1
-  mImageTargetType: 0
-  mWidth: 0.15
-  mHeight: 0.15
-  mRuntimeTexture: {fileID: 0}
+  mImageTargetType: 3
+  mWidth: 0.2
+  mHeight: 0.2
+  mRuntimeTexture: {fileID: 2800000, guid: 47ce0a164098f3948a34b14e3ea7f80f, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -1616,14 +1616,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: mazeportal
+  mTrackableName: maze1
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/MAZEdatabase.xml
   mAspectRatio: 1
-  mImageTargetType: 0
-  mWidth: 0.15
-  mHeight: 0.15
-  mRuntimeTexture: {fileID: 0}
+  mImageTargetType: 3
+  mWidth: 0.2
+  mHeight: 0.2
+  mRuntimeTexture: {fileID: 2800000, guid: 61d68927f0fd2cf42a01297bfd0ca219, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -4059,14 +4059,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: mazespike
+  mTrackableName: maze4
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/MAZEdatabase.xml
   mAspectRatio: 1
-  mImageTargetType: 0
-  mWidth: 0.15
-  mHeight: 0.15
-  mRuntimeTexture: {fileID: 0}
+  mImageTargetType: 3
+  mWidth: 0.2
+  mHeight: 0.2
+  mRuntimeTexture: {fileID: 2800000, guid: 055ec2b89d87a0f4eadbb20c7a022b65, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -4509,14 +4509,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: mazebutton
+  mTrackableName: maze2
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/MAZEdatabase.xml
   mAspectRatio: 1
-  mImageTargetType: 0
-  mWidth: 0.15
-  mHeight: 0.15
-  mRuntimeTexture: {fileID: 0}
+  mImageTargetType: 3
+  mWidth: 0.2
+  mHeight: 0.2
+  mRuntimeTexture: {fileID: 2800000, guid: 0ceaa640a465b4b438050c70f296c143, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -4554,7 +4554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1488395852}
   mHiddenRoot: {fileID: 0}
-  mTargetName: mazebutton
+  mTargetName: maze2
   mDatasetName: Vuforia/MAZEdatabase.xml
   mCastedBehaviour: {fileID: 1488395852}
   mMeshFilter: {fileID: 0}
@@ -6173,14 +6173,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: maze3d
+  mTrackableName: maze5
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/MAZEdatabase.xml
   mAspectRatio: 1
-  mImageTargetType: 0
-  mWidth: 0.15
-  mHeight: 0.15
-  mRuntimeTexture: {fileID: 0}
+  mImageTargetType: 3
+  mWidth: 0.2
+  mHeight: 0.2
+  mRuntimeTexture: {fileID: 2800000, guid: 3ee37ae4a5060b443a6e35053e45cd99, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
