@@ -13,11 +13,14 @@ public class ChangeScene : MonoBehaviour
     //[SerializeField] private GameObject spikeCanvas;
     //[SerializeField] private GameObject threeDCanvas;
 
-    public void ScanMazePortal()
+    public void TestDebug() {
+        SceneManager.LoadScene(1);
+    }
+    public void EnterMazePortal()
     {
         SceneManager.LoadScene(1);
     }
-    public void ScanMazeButton()
+    public void EnterMazeButton()
     {
         SceneManager.LoadScene(2);
     }
@@ -25,11 +28,11 @@ public class ChangeScene : MonoBehaviour
     //{
     //    SceneManager.LoadScene(3);
     //}
-    public void ScanMazeSpike()
+    public void EnterMazeSpike()
     {
         SceneManager.LoadScene(4);
     }
-    public void ScanMaze3D()
+    public void EnterMaze3D()
     {
         SceneManager.LoadScene(5);
     }

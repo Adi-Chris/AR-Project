@@ -8,19 +8,22 @@ public class PC_Gyro : MonoBehaviour
     // Warning text
     [SerializeField] GameObject gyroWarning;
     [SerializeField] TMP_Text warningText;
+    [SerializeField] TMP_Text velocityText;
 
     // Gyro
-    Gyroscope m_Gyro;
+    Gyroscope m_Gyro; // Gyroscope variable is no longer needed
     Rigidbody rb;
 
-    float gyroMultiplier = 2f;
+    float gyroMultiplier = 5f;
     public Quaternion initialOrientation;
 
     // Gravity
     Transform gravityNormalGameObject; // Gravity normal game object defaultnya harus hadap ke atas (sumbu Y positif)
     Vector3 gravityDirection;
     float gravityMultiplier = 9.8f;
-    
+
+    // Keyboard movement speed
+    // public float speed = 2f;
 
     // Start is called before the first frame update
     void Start()
@@ -28,11 +31,14 @@ public class PC_Gyro : MonoBehaviour
         gravityNormalGameObject = gameObject.GetComponentInParent<Transform>();
         rb = gameObject.GetComponent<Rigidbody>();
 
-        //Set up and enable the gyroscope (check your device has one)
+        // Set up and enable the gyroscope (check your device has one)
         m_Gyro = Input.gyro;
         m_Gyro.enabled = true;
 
-        gyroWarning.SetActive(true); // TODO: Matikan ini
+        // Set the gyroscope update interval to the highest frequency
+        Input.gyro.updateInterval = 0.005f; // Update every 10ms, adjust as needed
+
+        gyroWarning.SetActive(true); // Changed to false as gyroscope is not used
     }
 
     public void InitializeOrientation() {
@@ -46,6 +52,16 @@ public class PC_Gyro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // // Keyboard Input
+        // float moveHorizontal = Input.GetAxis("Horizontal");
+        // float moveVertical = Input.GetAxis("Vertical");
+
+        // // Create a vector for the direction of movement
+        // Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+
+        // // Apply the force to the ball's Rigidbody
+        // rb.AddForce(movement * speed);
+
         // Gyro Input
         if (m_Gyro != null)
         {
@@ -68,11 +84,15 @@ public class PC_Gyro : MonoBehaviour
                 rotationEuler.z >= 180 ? rotationEuler.z - 360 : rotationEuler.z
             );
             // TODO: Mungkin di sumbu Y bisa ditambah 25 derajat untuk kedua ifnya
-            warningText.text = (rotationEuler).ToString(); // TODO: Matikan ini
+            
 
             // Add Force
-            rb.AddForce(rotationEuler.normalized * gyroMultiplier);
-            // warningText.text = (rb.velocity).ToString(); // TODO: Matikan ini
+            Vector3 normalized = rotationEuler.normalized;
+            Vector3 forceToAdd = new Vector3(normalized.x * 1, 0, normalized.y * 1);
+            rb.AddForce(forceToAdd * gyroMultiplier);
+            warningText.text = (forceToAdd).ToString(); // TODO: Matikan ini
+            // rb.AddForce(rotationEuler.normalized * gyroMultiplier, ForceMode.Impulse);
+            velocityText.text = (rb.velocity).ToString(); // TODO: Matikan ini
         }
         else
         {
@@ -80,7 +100,8 @@ public class PC_Gyro : MonoBehaviour
             Debug.LogError("Device doesn't support gyro");
         }
         
-        // // Custom Gravity
+        
+        // Custom Gravity
         // gravityDirection = gravityNormalGameObject.transform.up;
         // Vector3 gravity = gravityDirection.normalized * gravityMultiplier;
         // rb.AddForce(gravity);
