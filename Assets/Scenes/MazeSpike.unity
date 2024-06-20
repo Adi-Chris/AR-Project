@@ -792,8 +792,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 280.26, y: 544.99}
-  m_SizeDelta: {x: 120, y: 140}
+  m_AnchoredPosition: {x: 236.252, y: 547.05}
+  m_SizeDelta: {x: 98.505, y: 111.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &421350409
 MonoBehaviour:
@@ -1529,6 +1529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 987663489}
   - component: {fileID: 987663490}
+  - component: {fileID: 987663491}
   m_Layer: 0
   m_Name: FinishTrigger
   m_TagString: Untagged
@@ -1564,6 +1565,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.06994595, y: 0.015203893, z: 0.055371445}
   m_Center: {x: 0.004808043, y: 0.02190811, z: 0.019625017}
+--- !u!114 &987663491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987663488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 890b4048381f16f4cbb7c641eaef7813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 4
+  gameFinishCanvas: {fileID: 1940033200}
+  maze: {fileID: 923668357}
 --- !u!1 &1029091094
 GameObject:
   m_ObjectHideFlags: 0

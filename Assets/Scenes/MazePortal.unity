@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 155183797}
   - component: {fileID: 155183798}
+  - component: {fileID: 155183799}
   m_Layer: 0
   m_Name: FinishTrigger
   m_TagString: Untagged
@@ -168,6 +169,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.057656445, y: 0.015203893, z: 0.055825043}
   m_Center: {x: 0.011618817, y: 0.02190811, z: 0.0018999696}
+--- !u!114 &155183799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155183796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 890b4048381f16f4cbb7c641eaef7813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 1
+  gameFinishCanvas: {fileID: 1088171504}
+  maze: {fileID: 1738213140}
 --- !u!1 &171894266
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,8 +220,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 280.26, y: 544.99}
-  m_SizeDelta: {x: 120, y: 140}
+  m_AnchoredPosition: {x: 236.252, y: 547.05}
+  m_SizeDelta: {x: 98.505, y: 111.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &171894268
 MonoBehaviour:
@@ -2733,7 +2749,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1738213141
 Transform:
   m_ObjectHideFlags: 0
@@ -2974,9 +2990,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: Restart
+      - m_Target: {fileID: 1557142907}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Back
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

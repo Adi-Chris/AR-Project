@@ -6,10 +6,12 @@ public class Finish : MonoBehaviour
 {
     [SerializeField] int level;
     public GameObject gameFinishCanvas;
+    public GameObject maze;
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
             gameFinishCanvas.SetActive(true);
+            maze.SetActive(false);
         }    
     }
 
