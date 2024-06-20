@@ -154,14 +154,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6857738433341491324, guid: b002cf104284fc840b6507c240c873e2, type: 3}
-      propertyPath: m_Drag
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6857738433341491324, guid: b002cf104284fc840b6507c240c873e2, type: 3}
-      propertyPath: m_Mass
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 6857738433341491327, guid: b002cf104284fc840b6507c240c873e2, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -242,6 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5595d70229ab649855dd480f7e7d34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canTeleport: 1
 --- !u!114 &288553068 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6607541685175513338, guid: b002cf104284fc840b6507c240c873e2, type: 3}
@@ -1699,8 +1692,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afa5a8b2da3786a4db98db97ac9b2ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playGame: {fileID: 1052038193}
+  playGameCanvas: {fileID: 479769395}
   maze: {fileID: 1738213140}
+  playerController: {fileID: 288553068}
 --- !u!114 &1557142908
 MonoBehaviour:
   m_ObjectHideFlags: 0

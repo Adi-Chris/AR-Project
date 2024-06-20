@@ -333,7 +333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &523086862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1721,8 +1721,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afa5a8b2da3786a4db98db97ac9b2ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playGame: {fileID: 1676019008}
+  playGameCanvas: {fileID: 0}
   maze: {fileID: 1439775675}
+  playerController: {fileID: 0}
 --- !u!1 &1676019008
 GameObject:
   m_ObjectHideFlags: 0

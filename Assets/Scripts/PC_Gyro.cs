@@ -6,9 +6,9 @@ using UnityEngine;
 public class PC_Gyro : MonoBehaviour
 {
     // Warning text
-    [SerializeField] GameObject gyroWarning;
-    [SerializeField] TMP_Text warningText;
-    [SerializeField] TMP_Text velocityText;
+    // [SerializeField] GameObject gyroWarning;
+    // [SerializeField] TMP_Text warningText;
+    // [SerializeField] TMP_Text velocityText;
 
     // Gyro
     Gyroscope m_Gyro; // Gyroscope variable is no longer needed
@@ -34,11 +34,12 @@ public class PC_Gyro : MonoBehaviour
         // Set up and enable the gyroscope (check your device has one)
         m_Gyro = Input.gyro;
         m_Gyro.enabled = true;
+        Debug.Log(m_Gyro);
 
         // Set the gyroscope update interval to the highest frequency
         Input.gyro.updateInterval = 0.005f; // Update every 10ms, adjust as needed
 
-        gyroWarning.SetActive(true); // Changed to false as gyroscope is not used
+        // gyroWarning.SetActive(true);
     }
 
     public void InitializeOrientation() {
@@ -90,13 +91,12 @@ public class PC_Gyro : MonoBehaviour
             Vector3 normalized = rotationEuler.normalized;
             Vector3 forceToAdd = new Vector3(normalized.x * 1, 0, normalized.y * 1);
             rb.AddForce(forceToAdd * gyroMultiplier);
-            warningText.text = (forceToAdd).ToString(); // TODO: Matikan ini
+            // warningText.text = (forceToAdd).ToString(); // TODO: Matikan ini
             // rb.AddForce(rotationEuler.normalized * gyroMultiplier, ForceMode.Impulse);
-            velocityText.text = (rb.velocity).ToString(); // TODO: Matikan ini
+            // velocityText.text = (rb.velocity).ToString(); // TODO: Matikan ini
         }
         else
         {
-            gyroWarning.SetActive(true);
             Debug.LogError("Device doesn't support gyro");
         }
         

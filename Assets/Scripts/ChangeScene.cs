@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    [SerializeField] private GameObject playGame;
+    [SerializeField] private GameObject playGameCanvas;
     [SerializeField] private GameObject maze;
+    [SerializeField] private PC_Gyro playerController;
     //[SerializeField] private GameObject buttonCanvas;
     //[SerializeField] private GameObject arrowCanvas;
     //[SerializeField] private GameObject spikeCanvas;
@@ -24,10 +25,10 @@ public class ChangeScene : MonoBehaviour
     {
         SceneManager.LoadScene(2);
     }
-    //public void ScanMazeArrow()
-    //{
-    //    SceneManager.LoadScene(3);
-    //}
+    public void ScanMazeArrow()
+    {
+       SceneManager.LoadScene(3);
+    }
     public void EnterMazeSpike()
     {
         SceneManager.LoadScene(4);
@@ -39,9 +40,11 @@ public class ChangeScene : MonoBehaviour
      
     public void PlayGame()
     {
-        playGame.SetActive(false);
+        playGameCanvas.SetActive(false);
         maze.SetActive(true);
-
+        if (playerController != null) {
+            playerController.InitializeOrientation();
+        }
     }
     //public void ScannedMazeButton()
     //{

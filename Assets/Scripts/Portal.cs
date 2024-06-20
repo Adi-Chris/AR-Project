@@ -25,7 +25,7 @@ public class Portal : MonoBehaviour
         targetPortalScript.isTeleporting = true;
 
         // Prevent the player from teleporting immediately again
-        Ball ball = player.GetComponent<Ball>();
+        BallPortal ball = player.GetComponent<BallPortal>();
         if (ball != null)
         {
             StartCoroutine(ball.Cooldown(1f));

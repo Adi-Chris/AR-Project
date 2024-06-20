@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Ball : MonoBehaviour
+public class BallPortal : MonoBehaviour
 {
     public bool canTeleport = true;
 
