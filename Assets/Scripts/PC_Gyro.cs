@@ -28,22 +28,27 @@ public class PC_Gyro : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gravityNormalGameObject = gameObject.GetComponentInParent<Transform>();
+        // gravityNormalGameObject = gameObject.GetComponentInParent<Transform>();
         rb = gameObject.GetComponent<Rigidbody>();
 
-        // Set up and enable the gyroscope (check your device has one)
-        m_Gyro = Input.gyro;
-        m_Gyro.enabled = true;
-        Debug.Log(m_Gyro);
-
-        // Set the gyroscope update interval to the highest frequency
-        Input.gyro.updateInterval = 0.005f; // Update every 10ms, adjust as needed
+        SetupGyro();
 
         // gyroWarning.SetActive(true);
     }
 
+    private void SetupGyro() {
+        // Set up and enable the gyroscope (check your device has one)
+        m_Gyro = Input.gyro;
+        m_Gyro.enabled = true;
+
+        // Set the gyroscope update interval to the highest frequency
+        Input.gyro.updateInterval = 0.005f; // Update every 10ms, adjust as needed
+    }
+
     public void InitializeOrientation() {
         Debug.Log("Orientation set");
+        SetupGyro();
+        rb = gameObject.GetComponent<Rigidbody>();
         initialOrientation = Input.gyro.attitude;
         initialOrientation = new Quaternion(initialOrientation.x, initialOrientation.y, -initialOrientation.z, -initialOrientation.w);
 

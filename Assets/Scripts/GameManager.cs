@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
     public void Pause()
     {
         Time.timeScale = 0f;
-        namaMaze.SetActive(true );
+        namaMaze.SetActive(true);
         maze.SetActive(false);
         pauseCanvas.SetActive(true);
         pauseButton.SetActive(false );
