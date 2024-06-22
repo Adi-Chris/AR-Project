@@ -11,11 +11,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PC_Gyro playerController;
     [SerializeField] private GameObject pauseCanvas;
     [SerializeField] private GameObject pauseButton;
+    [SerializeField] private GameObject restartButton;
     [SerializeField] private GameObject namaMaze;
-    //[SerializeField] private GameObject buttonCanvas;
-    //[SerializeField] private GameObject arrowCanvas;
-    //[SerializeField] private GameObject spikeCanvas;
-    //[SerializeField] private GameObject threeDCanvas;
+    [SerializeField] private Transform startPos;
 
     public GameObject finishTrigger;
     public GameObject gameFinishCanvas;
@@ -28,47 +26,57 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void TestDebug() {
+    public void TestDebug()
+    {
         SceneManager.LoadScene(1);
     }
+
     public void EnterMazePortal()
     {
         SceneManager.LoadScene(1);
     }
+
     public void EnterMazeButton()
     {
         SceneManager.LoadScene(2);
     }
+
     public void EnterMazeArrow()
     {
-       SceneManager.LoadScene(3);
+        SceneManager.LoadScene(3);
     }
+
     public void EnterMazeSpike()
     {
         SceneManager.LoadScene(4);
     }
+
     public void EnterMaze3D()
     {
         SceneManager.LoadScene(5);
     }
-     
+
     public void PlayGame()
     {
         namaMaze.SetActive(false);
         playGameCanvas.SetActive(false);
         pauseButton.SetActive(true);
+        restartButton.SetActive(true);
         maze.SetActive(true);
-        if (playerController != null) {
+        if (playerController != null)
+        {
             playerController.InitializeOrientation();
         }
     }
+
     public void Pause()
     {
         Time.timeScale = 0f;
         namaMaze.SetActive(true);
         maze.SetActive(false);
         pauseCanvas.SetActive(true);
-        pauseButton.SetActive(false );
+        pauseButton.SetActive(false);
+        restartButton.SetActive(false);
     }
 
     public void Resume()
@@ -78,30 +86,15 @@ public class GameManager : MonoBehaviour
         maze.SetActive(true);
         pauseCanvas.SetActive(false);
         pauseButton.SetActive(true);
+        restartButton.SetActive(true);
     }
 
     public void Restart()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        playerController.transform.position = startPos.position;
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
-    //public void ScannedMazeButton()
-    //{
-    //    buttonCanvas.SetActive(true);
-    //}
-    //public void ScannedMazeArrow()
-    //{
-    //    arrowCanvas.SetActive(true);
-    //}
-    //public void ScannedMazeSpike()
-    //{
-    //    spikeCanvas.SetActive(true);
-    //}
-    //public void ScannedMaze3D()
-    //{
-    //    threeDCanvas.SetActive(true);
-    //}
 
     public void Back()
     {
