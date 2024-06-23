@@ -5,6 +5,7 @@ public class Portal : MonoBehaviour
 {
     public GameObject targetPortal; // Assign the target portal in the Inspector
     private bool isTeleporting = false;
+    [SerializeField] SoundManager soundManager;
 
     void OnTriggerEnter(Collider other)
     {
@@ -23,6 +24,9 @@ public class Portal : MonoBehaviour
         // Set the target portal to be teleporting
         Portal targetPortalScript = targetPortal.GetComponent<Portal>();
         targetPortalScript.isTeleporting = true;
+
+        // SFX
+        soundManager.PlayPortalTeleportSFX();
 
         // Prevent the player from teleporting immediately again
         BallPortal ball = player.GetComponent<BallPortal>();

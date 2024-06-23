@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject finishTrigger;
     public GameObject gameFinishCanvas;
+    [SerializeField] private SoundManager soundManager;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -58,6 +59,7 @@ public class GameManager : MonoBehaviour
 
     public void PlayGame()
     {
+        soundManager.PlayUIButtonSFX();
         namaMaze.SetActive(false);
         playGameCanvas.SetActive(false);
         pauseButton.SetActive(true);
@@ -71,6 +73,7 @@ public class GameManager : MonoBehaviour
 
     public void Pause()
     {
+        soundManager.PlayUIButtonSFX();
         Time.timeScale = 0f;
         namaMaze.SetActive(true);
         maze.SetActive(false);
@@ -81,6 +84,7 @@ public class GameManager : MonoBehaviour
 
     public void Resume()
     {
+        soundManager.PlayUIButtonSFX();
         Time.timeScale = 1f;
         namaMaze.SetActive(false);
         maze.SetActive(true);
@@ -91,6 +95,7 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
+        soundManager.PlayUIButtonSFX();
         Time.timeScale = 1f;
         playerController.transform.position = startPos.position;
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -98,6 +103,7 @@ public class GameManager : MonoBehaviour
 
     public void Back()
     {
+        soundManager.PlayUIButtonSFX();
         SceneManager.LoadScene(0);
     }
 }

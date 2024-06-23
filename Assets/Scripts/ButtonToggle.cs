@@ -4,6 +4,7 @@ public class ButtonToggle : MonoBehaviour
 {
     public GameObject objectToToggle;
     public bool state = true;
+    [SerializeField] SoundManager soundManager;
 
     public void OnTriggerEnter(Collider collision)
     {
@@ -11,11 +12,13 @@ public class ButtonToggle : MonoBehaviour
         {
             if (state)
             {
+                soundManager.PlayWallButtonSFX();
                 objectToToggle.SetActive(false);
                 state = false;
             }
             else
             {
+                soundManager.PlayWallButtonSFX();
                 objectToToggle.SetActive(true);
                 state = true;
             }

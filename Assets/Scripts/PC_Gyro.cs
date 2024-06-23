@@ -56,7 +56,7 @@ public class PC_Gyro : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // // Keyboard Input
         // float moveHorizontal = Input.GetAxis("Horizontal");
