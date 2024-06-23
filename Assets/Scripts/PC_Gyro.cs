@@ -66,7 +66,7 @@ public class PC_Gyro : MonoBehaviour
         // Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
         // // Apply the force to the ball's Rigidbody
-        // rb.AddForce(movement * speed);
+        // rb.AddForce(movement * 2);
 
         // Gyro Input
         if (m_Gyro != null)

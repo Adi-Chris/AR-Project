@@ -91,6 +91,8 @@ public class GameManager : MonoBehaviour
         pauseCanvas.SetActive(false);
         pauseButton.SetActive(true);
         restartButton.SetActive(true);
+
+        playerController.InitializeOrientation();
     }
 
     public void Restart()
@@ -103,6 +105,7 @@ public class GameManager : MonoBehaviour
 
     public void Back()
     {
+        Time.timeScale = 1f;
         soundManager.PlayUIButtonSFX();
         SceneManager.LoadScene(0);
     }

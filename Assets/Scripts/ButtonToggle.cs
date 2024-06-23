@@ -4,7 +4,7 @@ public class ButtonToggle : MonoBehaviour
 {
     public GameObject objectToToggle;
     public bool state = true;
-    [SerializeField] SoundManager soundManager;
+    public SoundManager soundManager;
 
     public void OnTriggerEnter(Collider collision)
     {
