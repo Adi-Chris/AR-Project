@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] int level;
     [SerializeField] private GameObject playGameCanvas;
     [SerializeField] private GameObject maze;
     [SerializeField] private PC_Gyro playerController;
@@ -17,7 +18,11 @@ public class GameManager : MonoBehaviour
 
     public GameObject finishTrigger;
     public GameObject gameFinishCanvas;
+    public GameObject timerCanvas;
+    [SerializeField] private Timer timerScript;
     [SerializeField] private SoundManager soundManager;
+
+    public int Level { get => level; set => level = value; }
 
     public void OnTriggerEnter(Collider other)
     {
@@ -65,9 +70,11 @@ public class GameManager : MonoBehaviour
         pauseButton.SetActive(true);
         restartButton.SetActive(true);
         maze.SetActive(true);
+        timerCanvas.SetActive(true);
         if (playerController != null)
         {
             playerController.InitializeOrientation();
+            timerScript.StartTimer();
         }
     }
 
@@ -100,6 +107,7 @@ public class GameManager : MonoBehaviour
         soundManager.PlayUIButtonSFX();
         Time.timeScale = 1f;
         playerController.transform.position = startPos.position;
+        timerScript.ResetTimer();
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

@@ -58,15 +58,15 @@ public class PC_Gyro : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        // // Keyboard Input
-        // float moveHorizontal = Input.GetAxis("Horizontal");
-        // float moveVertical = Input.GetAxis("Vertical");
+        // Keyboard Input
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
 
-        // // Create a vector for the direction of movement
-        // Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        // Create a vector for the direction of movement
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
-        // // Apply the force to the ball's Rigidbody
-        // rb.AddForce(movement * 2);
+        // Apply the force to the ball's Rigidbody
+        rb.AddForce(movement * 2);
 
         // Gyro Input
         if (m_Gyro != null)
