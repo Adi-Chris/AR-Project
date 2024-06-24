@@ -115,6 +115,7 @@ public class Timer : MonoBehaviour
     }
 
     private void DebugDeleteAllPlayerPrefs() {
+        Debug.LogWarning("Player Prefs Deleted");
         PlayerPrefs.DeleteAll();
     }
 }

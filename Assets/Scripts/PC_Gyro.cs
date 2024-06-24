@@ -25,11 +25,15 @@ public class PC_Gyro : MonoBehaviour
     // Keyboard movement speed
     // public float speed = 2f;
 
+    [SerializeField] SoundManager soundManager;
+
+    public Rigidbody Rb { get => rb; set => rb = value; }
+
     // Start is called before the first frame update
     void Start()
     {
         // gravityNormalGameObject = gameObject.GetComponentInParent<Transform>();
-        rb = gameObject.GetComponent<Rigidbody>();
+        Rb = gameObject.GetComponent<Rigidbody>();
 
         SetupGyro();
 
@@ -48,25 +52,25 @@ public class PC_Gyro : MonoBehaviour
     public void InitializeOrientation() {
         Debug.Log("Orientation set");
         SetupGyro();
-        rb = gameObject.GetComponent<Rigidbody>();
+        Rb = gameObject.GetComponent<Rigidbody>();
         initialOrientation = Input.gyro.attitude;
         initialOrientation = new Quaternion(initialOrientation.x, initialOrientation.y, -initialOrientation.z, -initialOrientation.w);
 
-        rb.velocity = new Vector3(0, 0, 0);
+        Rb.velocity = new Vector3(0, 0, 0);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        // Keyboard Input
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+        // // Keyboard Input
+        // float moveHorizontal = Input.GetAxis("Horizontal");
+        // float moveVertical = Input.GetAxis("Vertical");
 
-        // Create a vector for the direction of movement
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        // // Create a vector for the direction of movement
+        // Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
-        // Apply the force to the ball's Rigidbody
-        rb.AddForce(movement * 2);
+        // // Apply the force to the ball's Rigidbody
+        // Rb.AddForce(movement * 2);
 
         // Gyro Input
         if (m_Gyro != null)
@@ -95,7 +99,7 @@ public class PC_Gyro : MonoBehaviour
             // Add Force
             Vector3 normalized = rotationEuler.normalized;
             Vector3 forceToAdd = new Vector3(normalized.x * 1, 0, normalized.y * 1);
-            rb.AddForce(forceToAdd * gyroMultiplier);
+            Rb.AddForce(forceToAdd * gyroMultiplier);
             // warningText.text = (forceToAdd).ToString(); // TODO: Matikan ini
             // rb.AddForce(rotationEuler.normalized * gyroMultiplier, ForceMode.Impulse);
             // velocityText.text = (rb.velocity).ToString(); // TODO: Matikan ini
@@ -105,6 +109,8 @@ public class PC_Gyro : MonoBehaviour
             Debug.LogError("Device doesn't support gyro");
         }
         
+        // Set Sound
+        soundManager.SetRollingBallSFXVolume(Mathf.Clamp(Mathf.Max(Mathf.Abs(Rb.velocity.x), Mathf.Abs(Rb.velocity.z)) * 5f, 0, 1));
         
         // Custom Gravity
         // gravityDirection = gravityNormalGameObject.transform.up;

@@ -6,6 +6,7 @@ public class SoundManager : MonoBehaviour
 {
     [Header("Audio Sources")]
     [SerializeField] AudioSource sfxAudioSource;
+    [SerializeField] AudioSource rollingBallSFXAudioSource;
 
     [Header("Gameplay")]
     [SerializeField] AudioClip portalTeleportSFX;
@@ -15,6 +16,11 @@ public class SoundManager : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] AudioClip UIButtonSFX;
+
+    // Audio Sources
+    public void SetRollingBallSFXVolume(float volume) {
+        rollingBallSFXAudioSource.volume = volume;
+    }
 
     // Gameplay
     public void PlayPortalTeleportSFX() {
