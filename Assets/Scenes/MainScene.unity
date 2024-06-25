@@ -540,14 +540,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: maze3
+  mTrackableName: MazeArrowMap
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/MAZEdatabase.xml
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 47ce0a164098f3948a34b14e3ea7f80f, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 42b07d094cb33934b8814815672b3f41, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -581,7 +581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 523086863}
   mHiddenRoot: {fileID: 0}
-  mTargetName: maze3
+  mTargetName: MazeArrowMap
   mDatasetName: Vuforia/MAZEdatabase.xml
   mCastedBehaviour: {fileID: 523086863}
   mMeshFilter: {fileID: 0}
@@ -846,14 +846,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: maze1
+  mTrackableName: MazePortalMap
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/MAZEdatabase.xml
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 61d68927f0fd2cf42a01297bfd0ca219, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 4f1525819b9de5343b7d601827f9e336, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -887,7 +887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 787614280}
   mHiddenRoot: {fileID: 0}
-  mTargetName: maze1
+  mTargetName: MazePortalMap
   mDatasetName: Vuforia/MAZEdatabase.xml
   mCastedBehaviour: {fileID: 787614280}
   mMeshFilter: {fileID: 0}
@@ -1528,14 +1528,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: maze4
+  mTrackableName: MazeSpikeMap
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/MAZEdatabase.xml
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 055ec2b89d87a0f4eadbb20c7a022b65, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: ba1b08bb284574a418420f9992358c23, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -1569,7 +1569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1470883905}
   mHiddenRoot: {fileID: 0}
-  mTargetName: maze4
+  mTargetName: MazeSpikeMap
   mDatasetName: Vuforia/MAZEdatabase.xml
   mCastedBehaviour: {fileID: 1470883905}
   mMeshFilter: {fileID: 0}
@@ -1664,14 +1664,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: maze2
+  mTrackableName: MazeButtonMap
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/MAZEdatabase.xml
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 0ceaa640a465b4b438050c70f296c143, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: cf9f710deb0d6444a9727088507459d4, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -1705,7 +1705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1488395852}
   mHiddenRoot: {fileID: 0}
-  mTargetName: maze2
+  mTargetName: MazeButtonMap
   mDatasetName: Vuforia/MAZEdatabase.xml
   mCastedBehaviour: {fileID: 1488395852}
   mMeshFilter: {fileID: 0}
@@ -1946,6 +1946,8 @@ MonoBehaviour:
   timerCanvas: {fileID: 0}
   timerScript: {fileID: 0}
   soundManager: {fileID: 0}
+  mazeButtonToggles: []
+  maze3dToggle: {fileID: 0}
 --- !u!1 &1676019008
 GameObject:
   m_ObjectHideFlags: 0
@@ -2743,14 +2745,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: maze5
+  mTrackableName: Maze3DMap
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/MAZEdatabase.xml
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 3ee37ae4a5060b443a6e35053e45cd99, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 2ecdb9c7adb05be4184d90b582990f54, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -2784,7 +2786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1978057830}
   mHiddenRoot: {fileID: 0}
-  mTargetName: maze5
+  mTargetName: Maze3DMap
   mDatasetName: Vuforia/MAZEdatabase.xml
   mCastedBehaviour: {fileID: 1978057830}
   mMeshFilter: {fileID: 0}
