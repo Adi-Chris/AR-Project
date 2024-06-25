@@ -24,6 +24,8 @@ public class Spike : MonoBehaviour
             playerDeathParticle.transform.position = other.transform.position;
             playerDeathParticle.Play();
 
+            gameManager.VibratePhone();
+
             StartCoroutine(PlayDeathAnimation());
         }
         // Ide: Ball didisable, particle maen, delay, restart ball & restart timer dr gamemanager

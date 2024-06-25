@@ -9,6 +9,7 @@ public class Finish : MonoBehaviour
     [SerializeField] SoundManager soundManager;
     [SerializeField] Timer timerScript;
     [SerializeField] ParticleSystem winParticle;
+    [SerializeField] GameManager gameManager;
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
@@ -17,6 +18,8 @@ public class Finish : MonoBehaviour
             maze.SetActive(false);
 
             winParticle.Play();
+
+            gameManager.VibratePhone();
 
             timerScript.IsGameWin = true;
             timerScript.SetResultTimerDisplay();

@@ -398,6 +398,7 @@ MonoBehaviour:
   soundManager: {fileID: 662343446}
   timerScript: {fileID: 1557142910}
   winParticle: {fileID: 1733612877}
+  gameManager: {fileID: 1557142907}
 --- !u!1 &171894266
 GameObject:
   m_ObjectHideFlags: 0

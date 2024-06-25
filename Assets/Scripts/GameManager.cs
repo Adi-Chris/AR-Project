@@ -39,26 +39,31 @@ public class GameManager : MonoBehaviour
 
     public void EnterMazePortal()
     {
+        VibratePhone();
         SceneManager.LoadScene(1);
     }
 
     public void EnterMazeButton()
     {
+        VibratePhone();
         SceneManager.LoadScene(2);
     }
 
     public void EnterMazeArrow()
     {
+        VibratePhone();
         SceneManager.LoadScene(3);
     }
 
     public void EnterMazeSpike()
     {
+        VibratePhone();
         SceneManager.LoadScene(4);
     }
 
     public void EnterMaze3D()
     {
+        VibratePhone();
         SceneManager.LoadScene(5);
     }
 
@@ -116,5 +121,9 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         soundManager.PlayUIButtonSFX();
         SceneManager.LoadScene(0);
+    }
+
+    public void VibratePhone() {
+        Handheld.Vibrate();
     }
 }

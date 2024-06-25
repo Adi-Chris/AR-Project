@@ -494,6 +494,7 @@ MonoBehaviour:
   soundManager: {fileID: 1222201812}
   timerScript: {fileID: 1250622310}
   winParticle: {fileID: 658775846}
+  gameManager: {fileID: 1250622307}
 --- !u!1001 &88343092
 PrefabInstance:
   m_ObjectHideFlags: 0
