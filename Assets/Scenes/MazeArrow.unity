@@ -4124,6 +4124,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1153979005}
     m_Modifications:
     - target: {fileID: 6607541685175513338, guid: b002cf104284fc840b6507c240c873e2, type: 3}
+      propertyPath: warningText
+      value: 
+      objectReference: {fileID: 936129103}
+    - target: {fileID: 6607541685175513338, guid: b002cf104284fc840b6507c240c873e2, type: 3}
       propertyPath: soundManager
       value: 
       objectReference: {fileID: 711367173}

@@ -98,7 +98,7 @@ public class PC_Gyro : MonoBehaviour
 
             // Add Force
             Vector3 normalized = rotationEuler.normalized;
-            Vector3 forceToAdd = new Vector3(normalized.x * 1, 0, normalized.y * 1);
+            Vector3 forceToAdd = new Vector3(normalized.y * -1, 0, normalized.x * 1);
             Rb.AddForce(forceToAdd * gyroMultiplier);
             // warningText.text = (forceToAdd).ToString(); // TODO: Matikan ini
             // rb.AddForce(rotationEuler.normalized * gyroMultiplier, ForceMode.Impulse);
