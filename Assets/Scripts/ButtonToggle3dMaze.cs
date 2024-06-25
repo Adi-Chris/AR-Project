@@ -16,14 +16,15 @@ public class ButtonToggle3dMaze : ButtonToggle
         {
             if (!state)
             {
-                soundManager.PlayWallButtonSFX();
-                objectToToggle.SetActive(true);
-                state = true;
-                
-                // Animations
-                mazeAnimController.SetTrigger("Phase2Trigger");
-                playerRb.constraints = RigidbodyConstraints.FreezePosition;
-                StartUnfreezeCoroutine(maze3dPhase2Anim.length);
+                // soundManager.PlayWallButtonSFX();
+                // objectToToggle.SetActive(true);
+                // state = true;
+
+                // // Animations
+                // mazeAnimController.SetTrigger("Phase2Trigger");
+                // playerRb.constraints = RigidbodyConstraints.FreezePosition;
+                // StartUnfreezeCoroutine(maze3dPhase2Anim.length);
+                ToggleEnable();
             }
         }
     }
@@ -40,5 +41,28 @@ public class ButtonToggle3dMaze : ButtonToggle
     public void StartUnfreezeCoroutine(float duration)
     {
         StartCoroutine(UnfreezePlayerAfterDelay(duration));
+    }
+
+    public void ToggleEnable()
+    {
+        soundManager.PlayWallButtonSFX();
+        objectToToggle.SetActive(true);
+        state = true;
+
+        // Animations
+        mazeAnimController.SetTrigger("Phase2Trigger");
+        playerRb.constraints = RigidbodyConstraints.FreezePosition;
+        StartUnfreezeCoroutine(maze3dPhase2Anim.length);
+    }
+
+    public void ToggleDisable() {
+        soundManager.PlayWallButtonSFX();
+        objectToToggle.SetActive(false);
+        state = false;
+
+        // Animations
+        mazeAnimController.SetTrigger("Phase1Trigger");
+        playerRb.constraints = RigidbodyConstraints.FreezePosition;
+        StartUnfreezeCoroutine(maze3dPhase2Anim.length);
     }
 }

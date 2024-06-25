@@ -24,6 +24,11 @@ public class GameManager : MonoBehaviour
 
     public int Level { get => level; set => level = value; }
 
+    // Level specific
+    [SerializeField] List<ButtonToggle> mazeButtonToggles;
+    [SerializeField] ButtonToggle3dMaze maze3dToggle;
+
+
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -114,6 +119,19 @@ public class GameManager : MonoBehaviour
         playerController.transform.position = startPos.position;
         timerScript.ResetTimer();
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        // Reset in MazeButton
+        if (mazeButtonToggles != null) {
+            foreach (ButtonToggle buttonToggle in mazeButtonToggles)
+            {
+                buttonToggle.ToggleEnable();
+            }
+        }
+
+        // Reset in Maze3D
+        if (maze3dToggle != null) {
+            maze3dToggle.ToggleDisable();
+        }
     }
 
     public void Back()

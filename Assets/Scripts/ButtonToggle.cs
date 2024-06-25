@@ -12,16 +12,26 @@ public class ButtonToggle : MonoBehaviour
         {
             if (state)
             {
-                soundManager.PlayWallButtonSFX();
-                objectToToggle.SetActive(false);
-                state = false;
+                ToggleDisable();
             }
             else
             {
-                soundManager.PlayWallButtonSFX();
-                objectToToggle.SetActive(true);
-                state = true;
+                ToggleEnable();
             }
         }
+    }
+
+    public void ToggleDisable()
+    {
+        soundManager.PlayWallButtonSFX();
+        objectToToggle.SetActive(false);
+        state = false;
+    }
+
+    public void ToggleEnable()
+    {
+        soundManager.PlayWallButtonSFX();
+        objectToToggle.SetActive(true);
+        state = true;
     }
 }

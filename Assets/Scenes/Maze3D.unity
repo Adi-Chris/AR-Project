@@ -3925,6 +3925,8 @@ MonoBehaviour:
   timerCanvas: {fileID: 143227416}
   timerScript: {fileID: 1250622310}
   soundManager: {fileID: 1222201812}
+  mazeButtonToggles: []
+  maze3dToggle: {fileID: 1710088897}
 --- !u!4 &1250622309
 Transform:
   m_ObjectHideFlags: 0
