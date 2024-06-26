@@ -7,7 +7,7 @@ public class PC_Gyro : MonoBehaviour
 {
     // Warning text
     // [SerializeField] GameObject gyroWarning;
-    [SerializeField] TMP_Text warningText;
+    // [SerializeField] TMP_Text warningText;
     // [SerializeField] TMP_Text velocityText;
 
     // Gyro
