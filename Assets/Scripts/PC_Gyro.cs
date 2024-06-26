@@ -7,7 +7,7 @@ public class PC_Gyro : MonoBehaviour
 {
     // Warning text
     // [SerializeField] GameObject gyroWarning;
-    // [SerializeField] TMP_Text warningText;
+    [SerializeField] TMP_Text warningText;
     // [SerializeField] TMP_Text velocityText;
 
     // Gyro
@@ -81,11 +81,12 @@ public class PC_Gyro : MonoBehaviour
             currentOrientation = new Quaternion(currentOrientation.x, currentOrientation.y, -currentOrientation.z, -currentOrientation.w);
 
             // Compute the rotation difference
-            Quaternion rotationDifference = currentOrientation * Quaternion.Inverse(initialOrientation);
+            // Quaternion rotationDifference = currentOrientation * Quaternion.Inverse(initialOrientation);
+            Quaternion rotationDifference = Quaternion.Inverse(initialOrientation) * currentOrientation;
 
             // Convert the rotation difference to Euler angles
             Vector3 rotationEuler = rotationDifference.eulerAngles;
-
+            
             // Cari kiri kanan
             // Intinya, kalau >= 180, maka harusnya bergerak ke arah sebaliknya, alias sumbu negatif
             rotationEuler = new Vector3(
@@ -94,7 +95,6 @@ public class PC_Gyro : MonoBehaviour
                 rotationEuler.z >= 180 ? rotationEuler.z - 360 : rotationEuler.z
             );
             // TODO: Mungkin di sumbu Y bisa ditambah 25 derajat untuk kedua ifnya
-            
 
             // Add Force
             Vector3 normalized = rotationEuler.normalized;
